@@ -20,10 +20,15 @@ This repository implements a vision-enabled chat API using FastAPI, Transformers
 
 2. **Install Dependencies**
 
-   Use Python 3.10 or later and create a virtual environment:
+   Use Conda to create and activate the environment:
    ```bash
-   python -m venv venv
-   source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+   # Create a new Conda environment named 'qwen_env' with Python 3.10
+   conda create -n qwen_env python=3.10
+
+   # Activate the Conda environment
+   conda activate qwen_env
+
+   # Install the required Python packages
    pip install -r requirements.txt
    ```
 
