@@ -15,7 +15,7 @@ This repository implements a vision-enabled chat API using FastAPI, Transformers
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/kyusonglee/qwen2.5-vl-api.git
-   cd qwen2.5-vl-api-endpoint
+   cd qwen2.5-vl-api
    ```
 
 2. **Install Dependencies**
@@ -101,6 +101,7 @@ The project includes a `Dockerfile` and a `docker-compose.yaml` for containerize
 This implementation is based on the guide provided by Hugging Face. You can find the original article [here](https://huggingface.co/blog/ariG23498/qwen25vl-api).
 
 Additionally, more information about Qwen2.5-VL can be found on the [Qwen blog](https://qwenlm.github.io/blog/qwen2.5-vl/).
+
 
 ## License
 

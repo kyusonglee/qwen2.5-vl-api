@@ -2,10 +2,7 @@ version: "3.9"
 
 services:
   app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    image: your_image_name
+    image: qwen2.5-vl-api
     ports:
       - "7860:7860"
     environment:
@@ -15,7 +12,7 @@ services:
       CHECKPOINT: "/app/checkpoints/Qwen2.5-VL-3B-Instruct"
     volumes:
       # Mount the host directory containing your checkpoints into the container
-      -  /home/kai/Documents/resources/:/app/checkpoints
+      -  /resources/:/app/checkpoints
     deploy:
       resources:
         reservations:
