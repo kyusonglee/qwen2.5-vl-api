@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: your_image_name
+    ports:
+      - "7860:7860"
+    environment:
+      # Set the number of Gunicorn workers (defaults to 4 if not provided)
+      WORKERS: "1"
+      # Set the checkpoint directory path inside the container
+      CHECKPOINT: "/app/checkpoints/Qwen2.5-VL-3B-Instruct"
+    volumes:
+      # Mount the host directory containing your checkpoints into the container
+      -  /home/kai/Documents/resources/:/app/checkpoints
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+    # If you’re not using Docker Swarm, you can also try uncommenting the runtime setting below:
+    # runtime: nvidia
