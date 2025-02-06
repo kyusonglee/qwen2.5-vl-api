@@ -20,7 +20,7 @@ processor = AutoProcessor.from_pretrained(
 )
 model = Qwen2_5_VLForConditionalGeneration.from_pretrained(
     checkpoint,
-    torch_dtype=torch.bfloat16,
+    torch_dtype="auto",
     device_map="auto",
     # attn_implementation="flash_attention_2",
 )
